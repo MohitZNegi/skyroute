@@ -1,4 +1,3 @@
-// store/slices/flightSlice.js
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {

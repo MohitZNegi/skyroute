@@ -1,4 +1,3 @@
-// store/providers.js
 'use client' // ← This directive makes this a Client Component
 
 import { Provider } from 'react-redux'

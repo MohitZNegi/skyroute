@@ -1,5 +1,3 @@
-
-// app/layout.js
 import { Providers } from '../store/providers'
 import { Navbar } from '../components/Navbar/Navbar'
 import './globals.css'
