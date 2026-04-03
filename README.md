@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkyRoute
 
-## Getting Started
+SkyRoute is a JavaScript-only Next.js App Router project for building a flight search experience with React and Redux.
 
-First, run the development server:
+**Goals**
+
+1. Clear app structure for app router pages, API routes, UI components, and state.
+2. Simple, predictable data flow using Redux Toolkit.
+3. Easy swap-in for real aviation APIs later.
+
+**Stack**
+
+1. Next.js (App Router)
+2. React
+3. Redux Toolkit + React Redux
+
+**Project Structure**
+
+1. `app/` routes, layouts, and API handlers
+2. `components/` reusable UI blocks
+3. `store/` Redux store, providers, and slices
+4. `lib/` API helpers and utilities
+
+**Architecture**
+
+1. UI components dispatch actions or call helpers
+2. Redux slice handles async fetching and state
+3. API route in `app/api/flights` returns data
+4. Pages read state via selectors and render lists
+
+**Key Concepts**
+
+1. App Router for file-based routing and layouts
+2. Client components for interactive state
+3. Redux for shared state and async flows
+4. API routes for backend logic
+
+**Best Practices**
+
+1. Keep UI components presentational and small
+2. Put async logic in slices or helpers, not pages
+3. Use predictable keys for list rendering
+4. Keep API response shapes stable
+
+**Planning**
+
+1. Start with mock data and UI flow
+2. Lock in API contract and query params
+3. Add validation and error states
+4. Replace mock API with real provider
+
+**Setup Plan**
+
+1. Install Node.js (LTS) and a package manager (npm comes with Node).
+2. Install project dependencies: `npm install`
+3. Run the dev server: `npm run dev`
+4. Open `http://localhost:3000` in your browser.
+5. Update `.env.local` when connecting a real API.
+
+**Scripts**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
+npm run lint
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
