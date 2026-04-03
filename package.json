@@ -10,13 +10,18 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
+    "hoist-non-react-statics": "^3.3.2",
     "next": "16.2.2",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-redux": "^9.2.0"
   },
   "devDependencies": {
+    "@types/hoist-non-react-statics": "^3.3.7",
     "eslint": "^9",
     "eslint-config-next": "16.2.2"
+  },
+  "typeAcquisition": {
+    "enable": false
   }
 }
