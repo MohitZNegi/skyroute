@@ -1,1 +1,122 @@
+.card {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  outline: none;
+}
 
+.card:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4);
+  border-color: #38bdf8;
+}
+
+.selected {
+  border-color: #38bdf8;
+  background: #f0f9ff;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.airline {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.statusActive    { background: #dcfce7; color: #166534; }
+.statusScheduled { background: #dbeafe; color: #1e40af; }
+.statusLanded    { background: #f1f5f9; color: #475569; }
+.statusCancelled { background: #fee2e2; color: #991b1b; }
+.statusUnknown   { background: #fef3c7; color: #92400e; }
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.airport {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.right {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.iata {
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-family: 'SF Mono', monospace;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.time {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.airportName {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.flightLine {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  color: #94a3b8;
+}
+
+.flightNumber {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.detail {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  color: #64748b;
+}
