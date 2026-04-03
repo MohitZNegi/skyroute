@@ -1,6 +1,8 @@
+/* components/FlightCard/FlightCard.module.css — replace colour variables */
+
 .card {
   background: #fff;
-  border: 1.5px solid #e2e8f0;
+  border: 1.5px solid var(--airnz-border);
   border-radius: 12px;
   padding: 1.25rem;
   cursor: pointer;
@@ -9,18 +11,20 @@
 }
 
 .card:hover {
-  border-color: #94a3b8;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border-color: var(--airnz-teal);
+  box-shadow: 0 4px 14px rgba(0, 129, 138, 0.1);
 }
 
 .card:focus-visible {
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4);
-  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(0, 129, 138, 0.35);
+  border-color: var(--airnz-teal);
 }
 
+/* Teal left-bar when selected */
 .selected {
-  border-color: #38bdf8;
-  background: #f0f9ff;
+  border-color: var(--airnz-teal);
+  border-left: 4px solid var(--airnz-teal);
+  background: var(--airnz-teal-dim);
 }
 
 .top {
@@ -31,20 +35,22 @@
 }
 
 .airline {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
-  color: #1e293b;
+  color: var(--airnz-black);
 }
 
 .status {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
   border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .statusActive    { background: #dcfce7; color: #166534; }
-.statusScheduled { background: #dbeafe; color: #1e40af; }
+.statusScheduled { background: var(--airnz-teal-dim); color: var(--airnz-teal); }
 .statusLanded    { background: #f1f5f9; color: #475569; }
 .statusCancelled { background: #fee2e2; color: #991b1b; }
 .statusUnknown   { background: #fef3c7; color: #92400e; }
@@ -71,19 +77,19 @@
   font-size: 1.75rem;
   font-weight: 800;
   font-family: 'SF Mono', monospace;
-  color: #0f172a;
+  color: var(--airnz-black);
   letter-spacing: -0.02em;
 }
 
 .time {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--airnz-teal);   /* teal for times — on-brand */
 }
 
 .airportName {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--airnz-mid);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -96,13 +102,14 @@
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
-  color: #94a3b8;
+  color: var(--airnz-mid);
 }
 
 .flightNumber {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--airnz-teal);
 }
 
 .line {
@@ -111,12 +118,13 @@
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+  color: var(--airnz-teal);
 }
 
 .detail {
   margin-top: 1rem;
   padding-top: 0.75rem;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--airnz-border);
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--airnz-mid);
 }

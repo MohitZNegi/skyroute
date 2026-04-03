@@ -1,74 +1,28 @@
+/* globals.css — full replacement */
+*, *::before, *::after { box-sizing: border-box; }
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-/* globals.css */
-*, *::before, *::after {
-  box-sizing: border-box;
+  --airnz-black:    #1a1a1a;
+  --airnz-teal:     #00818a;
+  --airnz-teal-lt:  #00a9b5;
+  --airnz-teal-dim: #e0f5f6;
+  --airnz-koru:     #cc0000;   /* the red from the koru tail logo */
+  --airnz-gray:     #f4f6f7;
+  --airnz-mid:      #64748b;
+  --airnz-border:   #d1dde0;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #f8fafc;
-  color: #0f172a;
+  background: var(--airnz-gray);
+  color: var(--airnz-black);
   margin: 0;
   line-height: 1.5;
 }
 
-/* Respect user's reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* High contrast mode support */
-@media (forced-colors: active) {
-  .card { border: 2px solid ButtonText; }
 }

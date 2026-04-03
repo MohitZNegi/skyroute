@@ -1,6 +1,7 @@
+/* components/Navbar/Navbar.module.css */
 .header {
-  background: #0f172a;
-  border-bottom: 1px solid #1e293b;
+  background: var(--airnz-black);
+  border-bottom: 3px solid var(--airnz-teal);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -10,18 +11,41 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  height: 60px;
+  height: 62px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  color: #38bdf8;
-  font-size: 1.25rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+/* The red koru dot — nod to the tail logo */
+.koruDot {
+  width: 22px;
+  height: 22px;
+  background: var(--airnz-koru);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  flex-shrink: 0;
+}
+
+.powered {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--airnz-teal-lt);
+  letter-spacing: 0.01em;
+  margin-left: 4px;
+  align-self: flex-end;
+  margin-bottom: 2px;
 }
 
 .navLink {
@@ -32,24 +56,18 @@
   transition: color 0.2s;
 }
 
-.navLink:hover {
-  color: #f1f5f9;
-}
+.navLink:hover { color: var(--airnz-teal-lt); }
 
-/* Accessibility: visible only on focus */
 .skipLink {
   position: absolute;
   top: -100%;
   left: 1rem;
-  background: #38bdf8;
-  color: #0f172a;
+  background: var(--airnz-teal);
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-weight: 600;
   z-index: 999;
   transition: top 0.2s;
 }
-
-.skipLink:focus {
-  top: 1rem;
-}
+.skipLink:focus { top: 1rem; }
